@@ -24,10 +24,26 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+header#main{
+  width: 100vw;
+  position:fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  background-color: #1a1a1a;
+}
+
+footer#main{
+  width: 100vw;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  text-align: center;
 }
 
 h1 {
@@ -36,7 +52,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 3px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -54,6 +70,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +81,22 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 400px) {
+  #root{
+    padding: 8rem 10px;
+  }
+  .task-list-wrapper{
+    grid-template-columns: 1fr;
+  }
+
+  .task-form{
+    margin-bottom:30px;
+  }
+
+  .task-item{
+    line-height: 1.2rem;
   }
 }
